@@ -20,6 +20,8 @@ public class Garfo {
                 estadoDireita == EstadoFilosofo.COMENDO) {
                 System.out.println("Filosofo "+idFilosofo+" vai mimir. Estado dos vizinhos: "+estadoEsquerda+" - "+estadoDireita);
                 wait();
+                estadoEsquerda = estado[vizinhoEsquerda];
+                estadoDireita = estado[vizinhoDireita];
             }
             estado[idFilosofo] = EstadoFilosofo.COMENDO;
         } catch (Exception e) {
